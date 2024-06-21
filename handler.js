@@ -1,0 +1,116 @@
+exports.welcome1 = (req, res) => {
+    res.json({
+      message: "Learning Together: We enhance communication for the deaf community",
+      next: "/welcome2"
+    });
+  };
+  
+  exports.welcome2 = (req, res) => {
+    res.json({
+      message: "Discover Our Features: Real-time sign language recognition, dictionary, and learning numbers",
+      next: "/welcomefinal"
+    });
+  };
+  
+  exports.welcomeFinal = (req, res) => {
+    res.json({
+      message: "Begin Your Journey with Us: Let #AkuJuga bridge your communication needs.",
+      next: "/menu"
+    });
+  };
+  
+  exports.menu = (req, res) => {
+    res.json({
+      message: "Discovering the Silent Symphony",
+      options: {
+        alphabets: "/learn/alphabets",
+        numbers: "/learn/numbers",
+        dictionary: "/learn/dictionary"
+      }
+    });
+  };
+  
+  exports.learnAlphabets = (req, res) => {
+    res.json({
+      message: "Alphabet: Abjad A-Z",
+      camera_option: "/detect/alphabets",
+      images: [
+        { letter: "A", image_url: "https://storage.googleapis.com/akujuga-bucket/A.jpg" },
+        { letter: "B", image_url: "https://storage.googleapis.com/akujuga-bucket/B%20(1).jpg" },
+      { letter: "C", image_url: "https://storage.googleapis.com/akujuga-bucket/C%20(1).jpg" },
+      { letter: "D", image_url: "https://storage.googleapis.com/akujuga-bucket/D%20(1).jpg" },
+      { letter: "E", image_url: "https://storage.googleapis.com/akujuga-bucket/E%20(1).jpg" },
+      { letter: "F", image_url: "https://storage.googleapis.com/akujuga-bucket/F%20(1).jpg" },
+      { letter: "G", image_url: "https://storage.googleapis.com/akujuga-bucket/G%20(1).jpg" },
+      { letter: "H", image_url: "https://storage.googleapis.com/akujuga-bucket/H%20(1).jpg" },
+      { letter: "I", image_url: "https://storage.googleapis.com/akujuga-bucket/I%20(1).jpg" },
+      { letter: "J", image_url: "https://storage.googleapis.com/akujuga-bucket/J%20(1).jpg" },
+      { letter: "K", image_url: "https://storage.googleapis.com/akujuga-bucket/K%20(1).jpg" },
+      { letter: "L", image_url: "https://storage.googleapis.com/akujuga-bucket/L%20(1).jpg" },
+      { letter: "M", image_url: "https://storage.googleapis.com/akujuga-bucket/M%20(1).jpg" },
+      { letter: "N", image_url: "https://storage.googleapis.com/akujuga-bucket/N%20(1).jpg" },
+      { letter: "O", image_url: "https://storage.googleapis.com/akujuga-bucket/O%20(1).jpg" },
+      { letter: "P", image_url: "https://storage.googleapis.com/akujuga-bucket/P%20(1).jpg" },
+      { letter: "Q", image_url: "https://storage.googleapis.com/akujuga-bucket/Q%20(1).jpg" },
+      { letter: "R", image_url: "https://storage.googleapis.com/akujuga-bucket/R%20(1).jpg" },
+      { letter: "S", image_url: "https://storage.googleapis.com/akujuga-bucket/S%20(1).jpg" },
+      { letter: "T", image_url: "https://storage.googleapis.com/akujuga-bucket/T%20(1).jpg" },
+      { letter: "U", image_url: "https://storage.googleapis.com/akujuga-bucket/U%20(1).jpg" },
+      { letter: "V", image_url: "https://storage.googleapis.com/akujuga-bucket/V%20(1).jpg" },
+      { letter: "W", image_url: "https://storage.googleapis.com/akujuga-bucket/W%20(1).jpg" },
+      { letter: "X", image_url: "https://storage.googleapis.com/akujuga-bucket/X%20(1).jpg" },
+      { letter: "Y", image_url: "https://storage.googleapis.com/akujuga-bucket/Y%20(1).jpg" },
+      { letter: "Z", image_url: "https://storage.googleapis.com/akujuga-bucket/Z%20(1).jpg" }
+      ]
+    });
+  };
+  
+  exports.learnNumbers = (req, res) => {
+    res.json({
+      message: "Angka: Numerik",
+      camera_option: "/detect/numbers",
+      images: [
+        { number: "0", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%200%20(1).jpeg" },
+      { number: "1", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%201%20(1).jpeg" },
+      { number: "2", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%202%20(1).jpeg" },
+      { number: "3", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%203%20(1).jpeg" },
+      { number: "4", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%204%20(1).jpeg" },
+      { number: "5", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%205%20(1).jpeg" },
+      { number: "6", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%206%20(1).jpeg" },
+      { number: "7", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%207%20(1).jpeg" },
+      { number: "8", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%208%20(1).jpeg" },
+      { number: "9", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%209%20(1).jpeg" },
+      { number: "10", image_url: "https://storage.googleapis.com/akujuga-bucket/Sign%2010%20(1).jpeg" }
+      ]
+    });
+  };
+  
+  exports.learnDictionary = (req, res) => {
+    res.json({
+      message: "Mini Dictionary with Basic Words",
+      words: [
+        { word: "Apa", image_url: "https://storage.googleapis.com/akujuga-bucket/BISINDO_Apa_001.mp4" },
+        { word: "Baik", image_url: "https://storage.googleapis.com/akujuga-bucket/BISINDO_Baik_001.mp4" },
+        { word: "Kamu", image_url: "https://storage.googleapis.com/akujuga-bucket/BISINDO_Kamu_001.mp4" },
+        { word: "Terimakasih", image_url: "https://storage.googleapis.com/akujuga-bucket/BISINDO_Terima%20Kasih_001.mp4" },
+        { word: "Tidur", image_url: "https://storage.googleapis.com/akujuga-bucket/BISINDO_Tidur_001.mp4" }
+      ]
+    });
+  };
+  
+  exports.classifyImageAlphabet = (req, res) => {
+    res.json({
+      status: "success",
+      message: "Result",
+      letter: "A"
+    });
+  };
+  
+  exports.classifyImageNumber = (req, res) => {
+    res.json({
+      status: "success",
+      message: "Result",
+      number: "1"
+    });
+  };
+  
